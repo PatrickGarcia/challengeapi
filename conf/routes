@@ -1,5 +1,5 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 
-POST     /passwords               controllers.PasswordController.IsValidPassword(request: Request)
+POST     /passwords               controllers.password.PasswordController.IsValidPassword(request: Request)
 

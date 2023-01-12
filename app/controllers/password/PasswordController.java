@@ -1,13 +1,14 @@
-package controllers;
+package controllers.password;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import usecases.PasswordDTO;
+import usecases.password.InputValidatePasswordDto;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
-import usecases.PasswordValidation;
+import usecases.password.OutputValidatePasswordDto;
+import usecases.password.validate.PasswordValidationUseCase;
 
 import javax.inject.Inject;
 
@@ -16,7 +17,7 @@ public class PasswordController extends Controller {
     private final static Logger.ALogger appLogger = Logger.of("app");
 
     @Inject
-    PasswordValidation passwordValidation;
+    PasswordValidationUseCase passwordValidationUseCase;
     public Result IsValidPassword(Http.Request request){
         try {
             appLogger.info("Requisição recebida");
@@ -25,17 +26,14 @@ public class PasswordController extends Controller {
             if (bodyJson == null){
                 return badRequest("Body da requisição inválido");
             }
-            PasswordDTO passwordDTO = Json.fromJson(bodyJson, PasswordDTO.class);
 
-            if (passwordValidation.execute(passwordDTO.getPassword())) {
-                String message = "Validação executada. Password válido";
-                appLogger.info(message);
-                return ok(message);
-            } else {
-                String message = "Validação executada. Password inválido";
-                appLogger.warn(message);
-                return badRequest(message);
-            }
+            InputValidatePasswordDto input = Json.fromJson(bodyJson, InputValidatePasswordDto.class);
+
+            OutputValidatePasswordDto output = passwordValidationUseCase.execute(input);
+
+            appLogger.info("Retornando dados ao usuário: {}", Json.toJson(output));
+            return ok(Json.toJson(output));
+
         } catch (Exception e){
             String message = "Erro interno do servidor ao processar a requisição";
             appLogger.error(message);

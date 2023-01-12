@@ -1,4 +1,4 @@
-package controllers;
+package controllers.password;
 
 import org.junit.Test;
 import play.Application;
@@ -39,7 +39,7 @@ public class PasswordControllerTest extends WithApplication {
 
 
         Result result = route(app, request);
-        assertEquals(BAD_REQUEST, result.status());
+        assertEquals(OK, result.status());
     }
 
     @Test

@@ -1,10 +1,12 @@
-package usecases;
+package usecases.password;
 
-public class PasswordDTO {
+public class InputValidatePasswordDto {
 
     private String password;
 
-    public PasswordDTO(String password) {
+    public InputValidatePasswordDto() {
+    }
+    public InputValidatePasswordDto(String password) {
         this.password = password;
     }
 
