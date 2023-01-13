@@ -9,13 +9,13 @@ git clone https://github.com/PatrickGarcia/challengeapi.git
 #Acessar o diretório 'target/universal'
 cd challengeapi/target/universal
 
-#Extrair arquivos do zip challenge-1.0.zip
+#Extrair arquivos do zip 'challenge-1.0.zip'
 unzip challenge-1.0.zip
 
-#Aessar o diretório /bin
+#Acessar o diretório '/bin'
 cd challengeapi-1.0/bin/
 
-#Executar o projeto
+#Executar o projeto (challengeapi.bat para Windows)
 ./challengeapi
 ```
 A aplicação estará rodando no seguinte endereço: http://localhost:9000/
@@ -37,13 +37,13 @@ A aplicação estará rodando no seguinte endereço: http://localhost:9000/
 
 # Detalhes sobre a solução
 
-A solução para o case se baseou em resolver a problemática de forma simples, estruturando a aplicação de forma a tentar manter os princípios básicos de uma aplicação que atenda o que foi pedido, mas que não se limite a isso e permita a evolução e também o incremento de novas funcionalidades. Desta forma, o desenvolvimento se dividiu em
+A solução para o case se fundamentou em resolver a problemática de forma simples, estruturando a aplicação de forma a tentar manter os princípios básicos de uma aplicação que atenda o que foi pedido, mas que não se limite a isso e permita a evolução e também o incremento de novas funcionalidades. Desta forma, o desenvolvimento se dividiu em
 - Definir a regra de negócio
 - Estruturar a arquitetura da aplicação
 - Escolha do framework para implementação
 
 ## Regra de negócio
-Dado o problema, a ideia de resolver a validação da senha se baseou na utilização de expressões regulares (Regex), pois atende exatamente ao objetivo proposto.
+Dado o problema, a ideia de resolver a validação da senha se embasou na utilização de expressões regulares (Regex), pois atende exatamente ao objetivo proposto.
 
 ## Arquitetura
 
@@ -60,7 +60,7 @@ Onde as camadas são definidas a seguir:
 
 ## Escolha do framework para implementação
 
-A escolha do framework para implementação foi baseada no conhecimento prévio, onde existe nível maior de familiaridade com o Play Framework v2.8.1. No princípio, a escolha era o desenvolvimento a partir da stack do Spring em função de se ter um volume maior de documentação, tutoriais e ferramentas que oferecem integração. Porém, dado o tempo restante para implementação e a curva de aprendizagem que ainda seria necessária, optou-se pelo Play a fim de tentar otimizar o tempo demandado com o desenvolvimento.
+A escolha do framework para implementação foi a partir do conhecimento prévio, onde existe nível maior de familiaridade com o Play Framework (v2.8.1). No princípio, a escolha era o desenvolvimento a partir da stack do Spring em função de se ter um volume maior de documentação, tutoriais e ferramentas que oferecem integração. Porém, dado o tempo restante para implementação e a curva de aprendizagem que ainda seria necessária, optou-se pelo Play a fim de tentar otimizar o tempo demandado com o desenvolvimento.
 
 # Disponibilização da aplicação
 
