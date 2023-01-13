@@ -6,7 +6,7 @@ import usecases.password.validate.PasswordValidationUseCase;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class ValidatePasswordTest {
+class PasswordValidationUseCaseTest {
 
     @Test
     void validateWrongPassaword() {

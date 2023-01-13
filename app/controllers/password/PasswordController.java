@@ -31,8 +31,9 @@ public class PasswordController extends Controller {
 
             OutputValidatePasswordDto output = passwordValidationUseCase.execute(input);
 
-            appLogger.info("Retornando dados ao usuário: {}", Json.toJson(output));
-            return ok(Json.toJson(output));
+            JsonNode outputJson = Json.toJson(output);
+            appLogger.info("Retornando dados ao usuário: {}", outputJson);
+            return ok(Json.toJson(outputJson));
 
         } catch (Exception e){
             String message = "Erro interno do servidor ao processar a requisição";
