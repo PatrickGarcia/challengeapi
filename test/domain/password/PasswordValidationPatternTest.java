@@ -28,5 +28,6 @@ class PasswordValidationPatternTest {
 
         assertTrue(pattern.isValid("AbTp9!fok"));
         assertTrue(pattern.isValid("ItauPG0493!"));
+        assertTrue(pattern.isValid("ItauPG0493-"));
     }
 }
