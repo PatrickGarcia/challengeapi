@@ -35,7 +35,7 @@ A aplicação estará rodando no seguinte endereço: http://localhost:9000/
 }
 ```
 
-# Detalhes sobre a sua solução
+# Detalhes sobre a solução
 
 A solução para o case se baseou em resolver a problemática de forma simples, estruturando a aplicação de forma a tentar manter os princípios básicos de uma aplicação que atenda o que foi pedido, mas que não se limite a isso e permita a evolução e também o incremento de novas funcionalidades. Desta forma, o desenvolvimento se dividiu em
 - Definir a regra de negócio
