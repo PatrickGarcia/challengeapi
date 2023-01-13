@@ -18,7 +18,7 @@ public class PasswordController extends Controller {
 
     @Inject
     PasswordValidationUseCase passwordValidationUseCase;
-    public Result IsValidPassword(Http.Request request){
+    public Result isValidPassword(Http.Request request){
         try {
             appLogger.info("Requisição recebida");
             JsonNode bodyJson = request.body().asJson();

@@ -1,5 +1,6 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 
-POST     /passwords               controllers.password.PasswordController.IsValidPassword(request: Request)
+GET      /                        controllers.health.HealthController.healthCheck()
+POST     /passwords               controllers.password.PasswordController.isValidPassword(request: Request)
 

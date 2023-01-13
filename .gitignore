@@ -1,5 +1,11 @@
 logs
-
+target/global-logging
+target/scala-2.13
+target/streams
+target/task-temp-directory
+target/universal/scripts
+target/.history
+target/.history3
 null
 /.bsp
 /.idea
